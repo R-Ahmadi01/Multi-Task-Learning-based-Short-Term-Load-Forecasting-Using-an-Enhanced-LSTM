@@ -61,7 +61,7 @@ The dataset used in this project is the **PJM hourly load dataset**, a publicly 
 - **Day type**: Encodes whether the day is a weekday or weekend.
 
 ---
-# Data Preprocessing
+# Data_Preprocessing
 Data preprocessing is a critical step in ensuring the dataset is clean, consistent, and structured for effective model training and evaluation. This process involves feature extraction, handling missing data, and transforming the dataset into a supervised learning format.
 
 ## Preprocessing Steps
