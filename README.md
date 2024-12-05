@@ -19,7 +19,7 @@ This project presents a novel multi-task learning approach to enhance the perfor
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Dataset](#Dataset) 
-4. [Data Preprocessing](#Data_Preprocessing)
+4. [Data Preprocessing](#Data-Preprocessing)
 5. [Model Architecture](#model-architecture)
 6. [Results](#results)
 7. [Contributing](#contributing)
@@ -61,7 +61,7 @@ The dataset used in this project is the **PJM hourly load dataset**, a publicly 
 - **Day type**: Encodes whether the day is a weekday or weekend.
 
 ---
-# Data_Preprocessing
+# Data Preprocessing
 Data preprocessing is a critical step in ensuring the dataset is clean, consistent, and structured for effective model training and evaluation. This process involves feature extraction, handling missing data, and transforming the dataset into a supervised learning format.
 
 ## Preprocessing Steps
@@ -82,8 +82,67 @@ Data preprocessing is a critical step in ensuring the dataset is clean, consiste
    - Transform the time-series data into a supervised learning format using lagged data for historical inputs and the next 24-hour horizon for targets.
 
 ---
+## Architecture Components
 
+### 1. **Encoder**
+- **Purpose**: Captures temporal dependencies in the historical load data.
+- **Implementation**: 
+  - Built using Long Short-Term Memory (LSTM) layers.
+  - Processes input sequences over a specified historical time window.
+  - Outputs:
+    - **Hidden state (`state_h`)**: Encodes learned temporal features.
+    - **Cell state (`state_c`)**: Stores long-term dependencies.
+
+### 2. **Decoders**
+#### a. **Forecasting Decoder**
+- **Purpose**: Predicts load values for the next 24 hours.
+- **Implementation**:
+  - LSTM layers initialized with the encoder's hidden and cell states.
+  - Fully connected layers to map LSTM outputs to the forecast horizon.
+
+#### b. **Reconstruction Decoder**
+- **Purpose**: Reconstructs the historical load patterns.
+- **Implementation**:
+  - Shares the encoder's final hidden and cell states.
+  - LSTM layers generate reconstructed sequences from the encoded features.
+
+---
+
+## Key Features
+1. **State Transfer**:
+   - The encoder's hidden (`state_h`) and cell (`state_c`) states are transferred to both decoders.
+   - This ensures that both tasks share a rich representation of historical temporal dependencies.
+
+2. **Shared Learning**:
+   - The encoder serves as a shared component, facilitating knowledge transfer between tasks.
+   - The dual-task design enhances model performance compared to single-task models.
+
+3. **Custom Loss Function**:
+   - A custom loss function scales the mean squared error (MSE) to emphasize forecasting accuracy while maintaining reconstruction quality.
+
+4. **Loss Weighting**:
+   - Forecasting Task: Weight = 2.0 (Primary focus).
+   - Reconstruction Task: Weight = 1.0 (Secondary task).
+
+---
+
+## High-Level Architecture
+```plaintext
+Input → Encoder (LSTM) → Shared States → Forecasting Decoder (LSTM + Dense) → Predicted Load
+                                ↓
+                                → Reconstruction Decoder (LSTM) → Reconstructed Sequence
+```
+<p align="center">
+ <img src="(https://github.com/user-attachments/assets/22828507-d225-47e4-b7c7-82b470942ea5)" alt="Model Structure" width="720"/>
+</p>
+<p align="center">
+ <img src="(https://github.com/user-attachments/assets/2f731d0b-b907-48fd-8874-6569a87873e2" alt="Model Structure" width="720"/>
+</p>
+
+
+
+---
 ## Notes
 - The dataset includes hourly load data, making it ideal for short-term forecasting.
 - Temperature predictors and time-based features significantly enhance the model's ability to capture seasonal and diurnal patterns.
----
+
