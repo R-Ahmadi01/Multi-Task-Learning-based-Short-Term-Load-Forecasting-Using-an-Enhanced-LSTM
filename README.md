@@ -141,7 +141,72 @@ Input → Encoder (LSTM) → Shared States → Forecasting Decoder (LSTM + Dense
 <p align="center">
  <img src="(https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/LSTM%20associated%20with%20its%20parameters.png)" alt="Model Structure" width="720"/>
 </p>
+---
+# Results
 
+This section summarizes the performance of the proposed Multi-task Learning model compared to baseline models for short-term electrical load forecasting.
+
+---
+
+## Performance Metrics
+The model was evaluated using the following metrics:
+- **Mean Absolute Percentage Error (MAPE)**: Measures percentage-based error between predicted and actual values.
+- **Mean Absolute Error (MAE)**: Average absolute error across all predictions.
+- **Root Mean Squared Error (RMSE)**: Penalizes large prediction errors more heavily than MAE.
+- **R² Score**: Indicates how well the model explains the variance in the data.
+
+---
+
+## Overall Performance
+| Metric      | Proposed Model | Autoencoder LSTM | Regular LSTM |
+|-------------|----------------|------------------|--------------|
+| **MAPE**    | 5.785%         | 6.396%           | 8.697%       |
+| **MAE**     | 5127.373       | 5639.766         | 7707.660     |
+| **RMSE**    | 6803.425       | 7648.169         | 9806.485     |
+| **R²**      | 0.776          | 0.717            | 0.534        |
+
+The **Proposed Model** significantly outperforms both the Autoencoder LSTM and Regular LSTM models across all metrics, achieving:
+- **9.6% improvement in MAPE** over Autoencoder LSTM.
+- **10.4% improvement in R²** over Autoencoder LSTM.
+
+---
+
+## Step-by-Step Comparison
+| Horizon (Hour) | MAPE (Proposed) | MAPE (Autoencoder LSTM) | MAPE (Regular LSTM) |
+|----------------|-----------------|--------------------------|----------------------|
+| **Hour 1**     | 4.29%           | 5.04%                    | 8.22%               |
+| **Hour 6**     | 5.44%           | 6.20%                    | 8.68%               |
+| **Hour 18**    | 5.83%           | 6.16%                    | 7.99%               |
+| **Hour 24**    | 6.65%           | 6.83%                    | 7.87%               |
+
+The **Proposed Model** demonstrates lower errors at each forecasting horizon, maintaining accuracy even as the prediction horizon increases.
+
+---
+
+## Visual Results
+<p align="center">
+ <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/MAPE%20Proposed%20Model.png" alt="MAPE Trends for Proposed Model" width="720"/>
+</p>
+<p align="center">MAPE Trends for Proposed Model</p>
+
+<p align="center">
+ <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/MAPE%20Autoencoder%20LSTM.png" alt="MAPE Trends for Autoencoder LSTM" width="720"/>
+</p>
+<p align="center">MAPE Trends for Autoencoder LSTM</p>
+
+---
+
+## Key Observations
+1. **Stable Performance**:
+   - The Proposed Model exhibits smooth and gradual increases in MAPE over the 24-hour horizon, starting at 4.29% for Hour 1 and reaching 6.65% by Hour 24.
+2. **Comparison with Baselines**:
+   - The Autoencoder LSTM shows higher fluctuations in error trends, while the Regular LSTM consistently underperforms.
+3. **Multi-task Advantage**:
+   - The inclusion of the Reconstruction Decoder enhances the Forecasting Decoder's performance by sharing learned temporal dependencies.
+
+---
+
+For more detailed analyses, refer to the visualizations and discussions in the [Jupyter Notebook](https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/ENEL_645_final_project.ipynb).
 
 ---
 ## Notes
