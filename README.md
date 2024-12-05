@@ -133,12 +133,14 @@ Input → Encoder (LSTM) → Shared States → Forecasting Decoder (LSTM + Dense
                                 → Reconstruction Decoder (LSTM) → Reconstructed Sequence
 ```
 <p align="center">
- <img src="(https://github.com/user-attachments/assets/22828507-d225-47e4-b7c7-82b470942ea5)" alt="Model Structure" width="720"/>
+ <img src="(https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/proposed%20deep%20model.png)" alt="Model Structure" width="720"/>
 </p>
 <p align="center">
- <img src="(https://github.com/user-attachments/assets/2f731d0b-b907-48fd-8874-6569a87873e2" alt="Model Structure" width="720"/>
+ <img src="(https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/Multi-task%20learning%20high%20level%20demonstration.png(" alt="Model Structure" width="720"/>
 </p>
-
+<p align="center">
+ <img src="(https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/LSTM%20associated%20with%20its%20parameters.png)" alt="Model Structure" width="720"/>
+</p>
 
 
 ---
