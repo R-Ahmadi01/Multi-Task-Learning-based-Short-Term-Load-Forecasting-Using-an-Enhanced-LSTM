@@ -133,14 +133,17 @@ Input → Encoder (LSTM) → Shared States → Forecasting Decoder (LSTM + Dense
                                 → Reconstruction Decoder (LSTM) → Reconstructed Sequence
 ```
 <p align="center">
- <img src="(https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/proposed%20deep%20model.png)" alt="Model Structure" width="720"/>
+ <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/proposed%20deep%20model.png" alt="Proposed Deep Model" width="720"/>
 </p>
+
 <p align="center">
- <img src="(https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/Multi-task%20learning%20high%20level%20demonstration.png(" alt="Model Structure" width="720"/>
+ <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/Multi-task%20learning%20high%20level%20demonstration.png" alt="Multi-task Learning High-Level Demonstration" width="720"/>
 </p>
+
 <p align="center">
- <img src="(https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/LSTM%20associated%20with%20its%20parameters.png)" alt="Model Structure" width="720"/>
+ <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/LSTM%20associated%20with%20its%20parameters.png" alt="LSTM Parameters" width="720"/>
 </p>
+
 ---
 # Results
 
