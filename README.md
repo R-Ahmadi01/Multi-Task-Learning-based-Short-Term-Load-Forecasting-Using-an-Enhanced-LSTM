@@ -197,12 +197,12 @@ The **Proposed Model** demonstrates lower errors at each forecasting horizon, ma
 
 ## Visual Results
 <p align="center">
- <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/MAPE%20Proposed%20Model.png" alt="MAPE Trends for Proposed Model" width="720"/>
+ <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/MAPE%20of%20Autoencoder%20LSTM%20model%20over%2024%20steps.png" alt="MAPE of Autoencoder LSTM model over 24 steps" width="720"/>
 </p>
 <p align="center">MAPE Trends for Proposed Model</p>
 
 <p align="center">
- <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/MAPE%20Autoencoder%20LSTM.png" alt="MAPE Trends for Autoencoder LSTM" width="720"/>
+ <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/MAPE%20of%20proposed%20model%20over%2024%20steps.png" alt="MAPE of proposed model over 24 step" width="720"/>
 </p>
 <p align="center">MAPE Trends for Autoencoder LSTM</p>
 
