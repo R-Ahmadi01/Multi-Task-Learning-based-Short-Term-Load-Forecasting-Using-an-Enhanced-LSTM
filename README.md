@@ -135,13 +135,22 @@ Input → Encoder (LSTM) → Shared States → Forecasting Decoder (LSTM + Dense
 <p align="center">
  <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/proposed%20deep%20model.png" alt="Proposed Deep Model" width="720"/>
 </p>
+<p align="center">
+   <em>Figure 1. Proposed Deep Model.</em>
+</p>
 
 <p align="center">
  <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/Multi-task%20learning%20high%20level%20demonstration.png" alt="Multi-task Learning High-Level Demonstration" width="720"/>
 </p>
+<p align="center">
+   <em>Figure 1. Multi-task Learning High-Level Demonstration.</em>
+</p>
 
 <p align="center">
  <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/LSTM%20associated%20with%20its%20parameters.png" alt="LSTM Parameters" width="720"/>
+</p>
+<p align="center">
+   <em>Figure 1. LSTM Parameters.</em>
 </p>
 
 ---
