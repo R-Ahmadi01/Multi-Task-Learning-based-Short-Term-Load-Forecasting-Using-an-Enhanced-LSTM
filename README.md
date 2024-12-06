@@ -82,8 +82,7 @@ Data preprocessing is a critical step in ensuring the dataset is clean, consiste
    - Transform the time-series data into a supervised learning format using lagged data for historical inputs and the next 24-hour horizon for targets.
 
 ---
-## Architecture Components
-
+# Model Architecture
 ### 1. **Encoder**
 - **Purpose**: Captures temporal dependencies in the historical load data.
 - **Implementation**: 
