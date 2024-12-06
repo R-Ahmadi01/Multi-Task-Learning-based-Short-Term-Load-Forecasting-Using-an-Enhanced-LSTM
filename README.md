@@ -220,7 +220,7 @@ The **Proposed Model** demonstrates lower errors at each forecasting horizon, ma
 
 ---
 
-For more detailed analyses, refer to the visualizations and discussions in the [Jupyter Notebook](https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/ENEL_645_final_project.ipynb).
+For more detailed analyses, refer to the visualizations and discussions in the [ENEL_645_final_project.ipynb](https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/ENEL_645_final_project.ipynb).
 
 ---
 ## Notes
