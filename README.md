@@ -22,9 +22,7 @@ This project presents a novel multi-task learning approach to enhance the perfor
 4. [Data Preprocessing](#Data-Preprocessing)
 5. [Model Architecture](#model-architecture)
 6. [Results](#results)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact](#contact)
+
 
 ---
 
@@ -126,25 +124,26 @@ Data preprocessing is a critical step in ensuring the dataset is clean, consiste
 ---
 
 ## High-Level Architecture
-```plaintext
-Input → Encoder (LSTM) → Shared States → Forecasting Decoder (LSTM + Dense) → Predicted Load
-                                ↓
-                                → Reconstruction Decoder (LSTM) → Reconstructed Sequence
-```
-<p align="center">
- <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/proposed%20deep%20model.png" alt="Proposed Deep Model" width="720"/>
-</p>
-<p align="center">
-   <em>Figure 1. Proposed Deep Model.</em>
-</p>
 
+As shown in Figure 1, a multi-task learning model consists of shared layers that enhance the learning process across tasks, as well as task-specific layers designed to fulfill different objectives. This structure facilitates knowledge sharing, improving model performance compared to single-task models.
 <p align="center">
  <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/Multi-task%20learning%20high%20level%20demonstration.png" alt="Multi-task Learning High-Level Demonstration" width="720"/>
 </p>
 <p align="center">
-   <em>Figure 2. Multi-task Learning High-Level Demonstration.</em>
+   <em>Figure 1. Multi-task Learning High-Level Demonstration.</em>
 </p>
 
+Figure 2 depicts the framework designed for this project.
+
+<p align="center">
+ <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/proposed%20deep%20model.png" alt="Proposed Deep Model" width="720"/>
+</p>
+<p align="center">
+   <em>Figure 2. Proposed Deep Model.</em>
+</p>
+
+
+Figure 3 illustrates the internal structure of an LSTM model.
 <p align="center">
  <img src="https://github.com/R-Ahmadi01/Multi-Task-Learning-based-Short-Term-Load-Forecasting-Using-an-Enhanced-LSTM/blob/main/LSTM%20associated%20with%20its%20parameters.png" alt="LSTM Parameters" width="720"/>
 </p>
